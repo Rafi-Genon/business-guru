@@ -26,6 +26,7 @@ const Login = () => {
                 const newUserInfo = { ...loggedInUser }
                 newUserInfo.name = user.displayName
                 newUserInfo.email = user.email
+                newUserInfo.image = user.photoURL
                 setLoggedInUser(newUserInfo)
 
                 console.log(loggedInUser);
