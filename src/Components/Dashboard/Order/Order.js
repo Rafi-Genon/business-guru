@@ -5,28 +5,37 @@ import { userContext } from '../../../App'
 import { useForm } from "react-hook-form";
 
 const Order = () => {
-    const [userOrder, setUserOrder] = useContext(userContext)
-    // console.log(userOrder);
+    const [userInfo, setUserInfo] = useContext(userContext)
     const [orderDetails, setOrderDetails] = useState(null)
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = (data) => {
         setOrderDetails(data);
     }
+    const placeOrder = (id, type) => {
+        const url = "http://localhost:5050/addOrder"
+        fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userInfo, orderDetails, id, type, status: "Pending", date: new Date() })
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+    }
     return (
         <div className="row">
             <SideBar></SideBar>
-            <div style={{backgroundColor: "#f6f9fc"}} className="col-lg-10">
+            <div style={{ backgroundColor: "#f6f9fc" }} className="col-lg-10">
                 <div className="row">
                     <div style={{ display: orderDetails ? 'none' : 'block' }} className="col-6">
                         <div style={{ borderRadius: '2em' }} className="bg-light p-5 m-2 shadow">
                             <p>You are ordering for:</p>
-                            <h5>{userOrder.order.serviceName}</h5>
-                            <h6 className="text-success">${userOrder.order.servicePrice}</h6>
+                            <h5>{userInfo.order.serviceName}</h5>
+                            <h6 className="text-success">${userInfo.order.servicePrice}</h6>
                         </div>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <label className="payment-lable my-3" style={{ width: '60%' }}>
                                 Your Company name
-                                <input name="" {...register("name")} placeholder="" required />
+                                <input name="" {...register("companyName")} placeholder="" required />
                             </label>
                             <br />
                             <label className="payment-lable my-3" style={{ width: '60%' }}>
@@ -42,7 +51,7 @@ const Order = () => {
                         </form>
                     </div>
                     <div style={{ display: orderDetails ? 'block' : 'none' }} className="col-6">
-                        <ProcessPayment></ProcessPayment>
+                        <ProcessPayment placeOrder={placeOrder}></ProcessPayment>
                     </div>
                 </div>
             </div>

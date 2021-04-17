@@ -15,13 +15,15 @@ import MakeAdmin from './Components/Dashboard/MakeAdmin/MakeAdmin';
 import Review from './Components/Dashboard/Review/Review';
 import Order from './Components/Dashboard/Order/Order';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import OrderList from './Components/Dashboard/OrderList/OrderList';
+import BookingList from './Components/Dashboard/BookingList/BookingList';
 export const userContext = createContext()
 
 function App() {
   const [userDetails, setUserDetails] = useState({
     name: '',
     email: '',
-    image:''
+    image: ''
   })
   return (
     <div>
@@ -53,6 +55,12 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/order">
               <Order></Order>
+            </PrivateRoute>
+            <PrivateRoute path="/allOrderList">
+              <OrderList></OrderList>
+            </PrivateRoute>
+            <PrivateRoute path="/bookingList">
+              <BookingList></BookingList>
             </PrivateRoute>
           </Switch>
         </Router>

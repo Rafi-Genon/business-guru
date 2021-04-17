@@ -7,10 +7,7 @@ import {
     CardExpiryElement
 } from "@stripe/react-stripe-js";
 
-// import useResponsiveFontSize from "../../useResponsiveFontSize";
-
 const useOptions = () => {
-    //   const fontSize = useResponsiveFontSize();
     const options = useMemo(
         () => ({
             style: {
@@ -34,7 +31,7 @@ const useOptions = () => {
     return options;
 };
 
-const SplitForm = () => {
+const SplitForm = ({ placeOrder }) => {
     const stripe = useStripe();
     const elements = useElements();
     const options = useOptions();
@@ -62,6 +59,7 @@ const SplitForm = () => {
         else {
             serPaymentSuccess(payload.paymentMethod.id);
             serPaymentError(null)
+            placeOrder(payload.paymentMethod.id, payload.paymentMethod.type)
         }
     };
 
@@ -131,7 +129,7 @@ const SplitForm = () => {
                 paymentError && <p className="text-danger">{paymentError}</p>
             }
             {
-                paymentSuccess&& <p className="text-success">Your payment successfully done</p>
+                paymentSuccess && <p className="text-success">Your payment successfully done</p>
             }
         </form>
 
