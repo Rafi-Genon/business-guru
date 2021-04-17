@@ -18,8 +18,8 @@ const AddService = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newServiceData)
         })
-        .then(res => res.json())
-        .then(data =>console.log(data))
+            .then(res => res.json())
+            .then(data => console.log(data))
     };
 
     // console.log(watch("example")); // watch input value by passing the name of it
@@ -55,7 +55,7 @@ const AddService = () => {
                             <br />
                         </div>
                         <div className="col-6">
-                        <label htmlFor="servicePrice">Price</label><br />
+                            <label htmlFor="servicePrice">Price</label><br />
                             <input name="servicePrice" {...register("servicePrice")} required />
                             <br />
                             <label htmlFor="serviceImage">Image</label><br />

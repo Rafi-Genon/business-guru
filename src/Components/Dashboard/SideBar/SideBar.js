@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SideBar = () => {
     return (
-        <div className="bg-light col-2" style={{ height: "100vh" }}>
+        <div className="col-2" style={{ height: "100vh" }}>
             <ul className="list-unstyled">
                 <Link to="/clientServiceList"><li>Service List</li></Link>
                 <Link to="/order"><li>Order</li></Link>

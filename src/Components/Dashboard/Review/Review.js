@@ -10,8 +10,16 @@ const Review = () => {
         const reviewData = { ...data }
         reviewData.profileImage = (user.image)
         reviewData.email = (user.email)
-
         console.log(reviewData);
+
+        const url = "http://localhost:5050/addReview"
+        fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(reviewData)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
     }
     return (
         <div className="row">
