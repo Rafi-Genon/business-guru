@@ -11,12 +11,13 @@ const Order = () => {
     const onSubmit = (data) => {
         setOrderDetails(data);
     }
-    const placeOrder = (id, type) => {
+    const placeOrder = (paymentId, paymentType) => {
         const url = "http://localhost:5050/addOrder"
+        const userOrderDetails = { ...userInfo, ...orderDetails, paymentId, paymentType, status: "Pending", date: new Date() }
         fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ userInfo, orderDetails, id, type, status: "Pending", date: new Date() })
+            body: JSON.stringify(userOrderDetails)
         })
             .then(res => res.json())
             .then(data => console.log(data))
@@ -24,35 +25,43 @@ const Order = () => {
     return (
         <div className="row">
             <SideBar></SideBar>
-            <div style={{ backgroundColor: "#f6f9fc" }} className="col-lg-10">
-                <div className="row">
-                    <div style={{ display: orderDetails ? 'none' : 'block' }} className="col-6">
-                        <div style={{ borderRadius: '2em' }} className="bg-light p-5 m-2 shadow">
-                            <p>You are ordering for:</p>
-                            <h5>{userInfo.order.serviceName}</h5>
-                            <h6 className="text-success">${userInfo.order.servicePrice}</h6>
-                        </div>
-                        <form onSubmit={handleSubmit(onSubmit)}>
-                            <label className="payment-lable my-3" style={{ width: '60%' }}>
-                                Your Company name
+            <div className="col-lg-10 background-color">
+            <h3 style={{fontWeight:'700'}} className="text-center py-4">Place Order Info</h3>
+                <div className="row p-5">
+                    {
+                        userInfo.order ? <>
+                            <div style={{ display: orderDetails ? 'none' : 'block' }} className="col-6">
+                                <div style={{ borderRadius: '2em' }} className="bg-light p-5 m-2 shadow">
+                                    <p>You are ordering for:</p>
+                                    <h5>{userInfo.order.serviceName}</h5>
+                                    <h6 className="text-success">${userInfo.order.servicePrice}</h6>
+                                </div>
+                                <form onSubmit={handleSubmit(onSubmit)}>
+                                    <label className="payment-lable my-3" style={{ width: '60%' }}>
+                                        Your Company name
                                 <input name="" {...register("companyName")} placeholder="" required />
-                            </label>
-                            <br />
-                            <label className="payment-lable my-3" style={{ width: '60%' }}>
-                                Your Company Address
+                                    </label>
+                                    <br />
+                                    <label className="payment-lable my-3" style={{ width: '60%' }}>
+                                        Your Company Address
                                 <input name="" {...register("address")} placeholder="" required />
-                            </label>
-                            <br /><label className="payment-lable my-3" style={{ width: '60%' }}>
-                                Your Website
+                                    </label>
+                                    <br /><label className="payment-lable my-3" style={{ width: '60%' }}>
+                                        Your Website
                                 <input name="" {...register("website")} placeholder="" required />
-                            </label>
-                            <br />
-                            <input type="submit" />
-                        </form>
-                    </div>
-                    <div style={{ display: orderDetails ? 'block' : 'none' }} className="col-6">
-                        <ProcessPayment placeOrder={placeOrder}></ProcessPayment>
-                    </div>
+                                    </label>
+                                    <br />
+                                    <input type="submit" />
+                                </form>
+                            </div>
+                            <div style={{ display: orderDetails ? 'block' : 'none' }} className="col-6">
+                                <ProcessPayment placeOrder={placeOrder}></ProcessPayment>
+                            </div>
+                        </>
+                        :<>
+                            <h1 className="text-danger">You didn't order anything back to home and order.</h1>
+                        </>
+                    }
                 </div>
             </div>
         </div>

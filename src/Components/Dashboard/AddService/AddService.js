@@ -41,25 +41,25 @@ const AddService = () => {
     return (
         <div className="row">
             <SideBar></SideBar>
-            <div className="col-10">
-                <h1>yoo i amko</h1>
+            <div className="col-10 background-color">
+                <h3 style={{ fontWeight: '700' }} className="text-center pt-4 pb-3">Add Service</h3>
 
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form style={{backgroundColor:'#dbf7e2'}} className="mt-3 p-5 rounded  shadow" onSubmit={handleSubmit(onSubmit)}>
                     <div className="row">
                         <div className="col-6">
                             <label htmlFor="serviceTitle">Title</label><br />
-                            <input name="serviceTitle" {...register("serviceName")} required />
+                            <input style={{width:'60%'}} name="serviceTitle" {...register("serviceName")} required />
                             <br />
                             <label htmlFor="serviceDescription">Description</label><br />
-                            <input name="serviceDescription" {...register("serviceDescription")} required />
+                            <input style={{width:'60%'}} name="serviceDescription" {...register("serviceDescription")} required />
                             <br />
                         </div>
                         <div className="col-6">
                             <label htmlFor="servicePrice">Price</label><br />
-                            <input name="servicePrice" {...register("servicePrice")} required />
+                            <input style={{width:'60%'}} name="servicePrice" {...register("servicePrice")} required />
                             <br />
                             <label htmlFor="serviceImage">Image</label><br />
-                            <input onChange={handleImageUpload} type="file" name="serviceImage" id="" required />
+                            <input style={{width:'60%'}} onChange={handleImageUpload} type="file" name="serviceImage" id="" required />
                             <br />
                         </div>
                     </div>

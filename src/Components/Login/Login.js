@@ -12,7 +12,6 @@ const Login = () => {
     // let { from } = location.state;
 
     const [loggedInUser, setLoggedInUser] = useContext(userContext)
-    console.log('null login', loggedInUser);
 
     if (firebase.apps.length === 0) {
         firebase.initializeApp(firebaseConfig);
@@ -28,14 +27,29 @@ const Login = () => {
                 newUserInfo.email = user.email
                 newUserInfo.image = user.photoURL
                 setLoggedInUser(newUserInfo)
-
-                console.log(loggedInUser);
+                // isAdmin()
                 history.replace(from);
                 // ...
             }).catch((error) => {
                 var errorMessage = error.message;
             });
     }
+
+    // const isAdmin = () => {
+    //     const url = "http://localhost:5050/isAdmin"
+    //     const email = loggedInUser.email
+    //     fetch(url, {
+    //         method: 'POST',
+    //         headers: { 'Content-Type': 'application/json' },
+    //         body: JSON.stringify({ email })
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             // loggedInUser.isAdmin = data;
+    //             setLoggedInUser(loggedInUser.isAdmin = data)
+    //         })
+    // }
+
     return (
         <div onClick={googelSignIn} className="d-flex justify-content-between align-content-cente btn mt-5" style={{ border: 'grey 1px solid', borderRadius: '2em', width: '30%', margin: 'auto' }}>
             <div style={{ width: '50px' }}>

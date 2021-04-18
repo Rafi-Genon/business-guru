@@ -24,14 +24,14 @@ const Review = () => {
     return (
         <div className="row">
             <SideBar></SideBar>
-            <div className="col-lg-10">
-                <p>it is review</p>
+            <div className="col-lg-10 background-color">
+            <h3 style={{fontWeight:'700'}} className="text-center py-4">Submit your review</h3>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input name="" {...register("name")} placeholder="Your name" required />
+                    <input style={{width:"30%"}} name="" {...register("name")} placeholder="Your name" required />
                     <br />
-                    <input name="" {...register("designation")} placeholder="Company's name, Designation" required />
+                    <input style={{width:"30%"}} name="" {...register("designation")} placeholder="Company's name, Designation" required />
                     <br />
-                    <input name="" {...register("description")} placeholder="Description" required />
+                    <input style={{width:"30%"}} name="" {...register("description")} placeholder="Description" required />
                     <br />
                     <input type="submit" />
                 </form>

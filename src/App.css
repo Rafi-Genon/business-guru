@@ -149,3 +149,6 @@ input:focus, .StripeElement--focus {
 .StripeElement.PaymentRequestButton {
   height: 40px;
 }
+.background-color{
+  background-color: #dbe9f7
+}

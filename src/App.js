@@ -17,6 +17,7 @@ import Order from './Components/Dashboard/Order/Order';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import OrderList from './Components/Dashboard/OrderList/OrderList';
 import BookingList from './Components/Dashboard/BookingList/BookingList';
+import ManageServices from './Components/Dashboard/ManageServices/ManageServices';
 export const userContext = createContext()
 
 function App() {
@@ -61,6 +62,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/bookingList">
               <BookingList></BookingList>
+            </PrivateRoute>
+            <PrivateRoute path="/manageServices">
+              <ManageServices></ManageServices>
             </PrivateRoute>
           </Switch>
         </Router>
