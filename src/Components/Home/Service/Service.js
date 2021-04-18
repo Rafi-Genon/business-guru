@@ -14,7 +14,8 @@ const Service = () => {
     return (
         <section className="bg-light">
             <h1 className="text-center py-4 mt-5">Our Super Fast <span className="text-success">Services</span> </h1>
-            <div className="row p-5 mt-5">
+            {/* <div className="row p-5 mt-5"> */}
+            <div style={{ display: 'flex', justifyContent: 'space-around',padding:'2%', flexWrap: 'wrap' }}>
                 {
                     services.length === 0 ? <div className="d-flex" style={{ margin: 'auto', marginTop: '10em' }}><Spinner animation="border" variant="primary mx-auto justify-content-center" /></div>
                         : services.map(service => <ServiceCard service={service} key={service._id}></ServiceCard>)

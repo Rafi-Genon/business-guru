@@ -39,7 +39,8 @@ const ServiceCard = ({ service }) => {
     };
 
     return (
-        <div className="col-lg-3">
+        // <div className="col-lg-3">
+        <div style={{paddingTop: "40px"}}>
             <div className="card shadow" style={{ width: "18rem" }}>
                 <img onMouseEnter={trigger} style={style} src={imageURL} className="card-img-top" alt="..." />
                 <div className="card-body">

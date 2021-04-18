@@ -1,4 +1,6 @@
 import React from 'react';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 import Reviews from '../Reviews/Reviews';
 import Service from '../Service/Service';
 import ServiceInfo from '../ServiceInfo/ServiceInfo';
@@ -6,10 +8,11 @@ import ServiceInfo from '../ServiceInfo/ServiceInfo';
 const Home = () => {
     return (
         <div>
-            <h1>hey home</h1>
+            <Header></Header>
             <Service></Service>
-            <Reviews></Reviews>
             <ServiceInfo></ServiceInfo>
+            <Reviews></Reviews>
+            <Footer></Footer>
         </div>
     );
 };

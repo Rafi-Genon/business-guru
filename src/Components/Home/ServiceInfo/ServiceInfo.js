@@ -5,8 +5,8 @@ import { faCheck, faCheckCircle, faTrashAlt } from '@fortawesome/free-solid-svg-
 
 const ServiceInfo = () => {
     return (
-        <div className="row service-info-section">
-            <div className="col-lg-6 col-md-6 col-sm-12 px-5 py-5">
+        <section className="row service-info-section">
+            <div className="col-lg-6 col-md-12 col-sm-12 px-5 py-5">
                 <h2 className="py-5">A whole world of freelance talent at your fingertips</h2>
 
                 <div className="py-2">
@@ -30,11 +30,11 @@ const ServiceInfo = () => {
                 </div>
 
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 d-flex align-items-center">
+            <div className="col-lg-6 col-md-12 col-sm-12 d-flex align-items-center p-5">
                 {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/WZ5WSUNrZt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
-                <iframe width="90%" height="70%" src="https://www.youtube.com/embed/WZ5WSUNrZt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="90%" height="550px" src="https://www.youtube.com/embed/WZ5WSUNrZt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-        </div>
+        </section>
     );
 };
 

@@ -14,7 +14,8 @@ const Reviews = () => {
     return (
         <section>
             <h1 className="text-center pt-3">Testimonials</h1>
-            <div className="row p-5">
+            {/* <div className="row p-5 d-flex justify-content-around"> */}
+                <div style={{ display: 'flex', justifyContent: 'space-around', margin: '2%', flexWrap: 'wrap' }}>
                 {
                     reviews.length === 0 ? <div className="d-flex" style={{ margin: 'auto', marginTop: '10em' }}><Spinner animation="border" variant="primary mx-auto justify-content-center" /></div>
                         : reviews.map(review => <ReviewsCard reviews={review} key={review._id}></ReviewsCard>)
