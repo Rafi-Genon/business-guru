@@ -12,7 +12,7 @@ const Order = () => {
         setOrderDetails(data);
     }
     const placeOrder = (paymentId, paymentType) => {
-        const url = "http://localhost:5050/addOrder"
+        const url = "https://hidden-hollows-18643.herokuapp.com/addOrder"
         const userOrderDetails = { ...userInfo, ...orderDetails, paymentId, paymentType, status: "Pending", date: new Date() }
         fetch(url, {
             method: 'POST',

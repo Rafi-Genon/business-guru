@@ -7,7 +7,7 @@ const SideBar = () => {
     const [isAdmin, setIsAdmin] = useState(false)
 
     useEffect(() => {
-        const url = "http://localhost:5050/isAdmin"
+        const url = "https://hidden-hollows-18643.herokuapp.com/isAdmin"
         const email = loggedInUser.email
         fetch(url, {
             method: 'POST',

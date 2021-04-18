@@ -12,7 +12,7 @@ const Review = () => {
         reviewData.email = (user.email)
         console.log(reviewData);
 
-        const url = "http://localhost:5050/addReview"
+        const url = "https://hidden-hollows-18643.herokuapp.com/addReview"
         fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

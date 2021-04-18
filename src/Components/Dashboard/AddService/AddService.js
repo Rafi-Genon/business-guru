@@ -12,7 +12,7 @@ const AddService = () => {
         newServiceData.imageURL = imageURL
         console.log(newServiceData)
 
-        const url = "http://localhost:5050/addService"
+        const url = "https://hidden-hollows-18643.herokuapp.com/addService"
         fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

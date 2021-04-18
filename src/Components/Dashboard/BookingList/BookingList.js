@@ -10,7 +10,7 @@ const BookingList = () => {
 
     console.log(loggedInUser.email);
     useEffect(() => {
-        fetch(`http://localhost:5050/showBookings?email=${loggedInUser.email}`)
+        fetch(`https://hidden-hollows-18643.herokuapp.com/showBookings?email=${loggedInUser.email}`)
             .then(res => res.json())
             .then(data => {
                 setBookingsList(data)

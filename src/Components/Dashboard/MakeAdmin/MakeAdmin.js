@@ -6,7 +6,7 @@ const MakeAdmin = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = email => {
         console.log(email);
-        const url = "http://localhost:5050/addAdmin"
+        const url = "https://hidden-hollows-18643.herokuapp.com/addAdmin"
         fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

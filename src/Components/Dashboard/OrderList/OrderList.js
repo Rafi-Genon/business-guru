@@ -6,7 +6,7 @@ const OrderList = () => {
     const [allOrders, setAllOrders] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5050/allOrders')
+        fetch('https://hidden-hollows-18643.herokuapp.com/allOrders')
             .then(res => res.json())
             .then(data => setAllOrders(data))
     }, [])
@@ -14,7 +14,7 @@ const OrderList = () => {
 
     const update = (id, status) => {
         console.log(id, status);
-        const url = `http://localhost:5050/update/${id}`
+        const url = `https://hidden-hollows-18643.herokuapp.com/update/${id}`
         fetch(url, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },

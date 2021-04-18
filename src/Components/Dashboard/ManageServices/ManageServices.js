@@ -7,7 +7,7 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 const ManageServices = () => {
     const [services, setServices] = useState([])
     const fetchServicesData = () => {
-        fetch('http://localhost:5050/services')
+        fetch('https://hidden-hollows-18643.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }
@@ -16,7 +16,7 @@ const ManageServices = () => {
     }, [])
 
     const removeFromServer = (id) => {
-        fetch(`http://localhost:5050/remove/${id}`, {
+        fetch(`https://hidden-hollows-18643.herokuapp.com/remove/${id}`, {
             method: 'DELETE'
         })
             .then(res => fetchServicesData())

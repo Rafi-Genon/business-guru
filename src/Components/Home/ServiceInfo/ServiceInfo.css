@@ -1,0 +1,11 @@
+.service-info-section{
+    background-color: rgb(241, 253, 247);
+}
+.service-info-section p{
+    font-size: 20px;
+    color: rgb(98, 100, 106);
+    padding-right: 90px;
+}
+.service-info-section h2{
+    padding-right: 90px;
+}
