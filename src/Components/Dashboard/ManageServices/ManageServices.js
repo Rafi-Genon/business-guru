@@ -25,7 +25,7 @@ const ManageServices = () => {
     return (
         <div className="row">
             <SideBar></SideBar>
-            <div className="col-lg-10 background-color">
+            <div className="col-lg-10 col-md-9 col-sm-12 background-color">
                 <h3 style={{fontWeight:'700'}} className="text-center pt-4">Manage Services</h3>
                 {
                     services.length === 0 ? <div className="d-flex" style={{ margin: 'auto', marginTop: '10em' }}><Spinner animation="border" variant="primary mx-auto justify-content-center" /></div>

@@ -16,7 +16,7 @@ const Header = () => {
                 <Carousel.Item interval={1000}>
                     <img
                         height="450px"
-                        className="d-block w-100"
+                        className="d-block w-100 img-fluid"
                         src={digitalMarketing}
                         alt="First slide"
                     />
@@ -28,7 +28,7 @@ const Header = () => {
                 <Carousel.Item interval={1000}>
                     <img
                         height="450px"
-                        className="d-block w-100"
+                        className="d-block w-100 img-fluid"
                         src={reactJs}
                         alt="Second slide"
                     />
@@ -40,7 +40,7 @@ const Header = () => {
                 </Carousel.Item>
                 <Carousel.Item interval={1000}>
                     <img height="450px"
-                        className="d-block w-100"
+                        className="d-block w-100 img-fluid"
                         src={logoDesign}
                         alt="Third slide"
                     />

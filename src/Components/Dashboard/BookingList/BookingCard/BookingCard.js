@@ -3,7 +3,7 @@ import React from 'react';
 const BookingCard = ({ booking }) => {
     const { imageURL, serviceDescription, serviceName } = booking.order
     return (
-        <div className="col-lg-3">
+        <div className="col-lg-3 col-md-6 col-sm-12 my-4">
             <div className="card" style={{ width: "18rem" }}>
                 <img src={imageURL} className="card-img-top" alt="..." />
                 <div className="card-body">

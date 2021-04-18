@@ -6,7 +6,7 @@ const Dashboard = () => {
     return (
         <div className="row ">
             <SideBar></SideBar>
-            <div className="col-10 background-color">
+            <div className="col-lg-10 col-md-9 col-sm-12 background-color">
                 <h3 style={{ fontWeight: '700' }} className="text-center pt-4 pb-3">Welcome to Dashboard </h3><h5 className="text-center pt-4 pb-3">choose option from sidebar</h5>
         </div>
         </div >

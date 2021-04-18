@@ -41,7 +41,7 @@ const AddService = () => {
     return (
         <div className="row">
             <SideBar></SideBar>
-            <div className="col-10 background-color">
+            <div className="col-lg-10 col-md-9 col-sm-12 background-color">
                 <h3 style={{ fontWeight: '700' }} className="text-center pt-4 pb-3">Add Service</h3>
 
                 <form style={{backgroundColor:'#dbf7e2'}} className="mt-3 p-5 rounded  shadow" onSubmit={handleSubmit(onSubmit)}>

@@ -21,7 +21,7 @@ const BookingList = () => {
     return (
         <div className="row">
             <SideBar></SideBar>
-            <div className="col-10 background-color">
+            <div className="col-lg-10 col-md-9 col-sm-12 background-color">
                 <h3 style={{ fontWeight: '700' }} className="text-center py-4">Booking List</h3>
                 <div className="row d-fex justify-content-around">
                     {

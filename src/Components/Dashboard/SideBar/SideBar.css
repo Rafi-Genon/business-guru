@@ -1,0 +1,7 @@
+.sidebar-item li {
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(114, 98, 255);
+    font-weight: 400;
+    padding-top: 1em;
+}

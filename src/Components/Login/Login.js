@@ -4,7 +4,7 @@ import "firebase/auth";
 import firebaseConfig from "../../firebase.config"
 import { useHistory, useLocation } from 'react-router';
 import { userContext } from '../../App';
-
+import googleLogo from "../../Images/googel-logo.png"
 const Login = () => {
     const history = useHistory()
     const location = useLocation()
@@ -53,7 +53,7 @@ const Login = () => {
     return (
         <div onClick={googelSignIn} className="d-flex justify-content-between align-content-cente btn mt-5" style={{ border: 'grey 1px solid', borderRadius: '2em', width: '30%', margin: 'auto' }}>
             <div style={{ width: '50px' }}>
-                {/* <img style={{ backgroundColor: 'red', width: '100%' }} src={googleLogo} alt="" /> */}
+                <img style={{ backgroundColor: 'red', width: '100%' }} src={googleLogo} alt="" />
             </div>
             <p className="pt-2" style={{ fontSize: '20px', paddingRight: '30%', fontWeight: '550' }}>Google Sign In</p>
         </div>

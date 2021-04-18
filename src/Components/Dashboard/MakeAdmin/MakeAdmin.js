@@ -18,7 +18,7 @@ const MakeAdmin = () => {
     return (
         <div className="row">
             <SideBar></SideBar>
-            <div className="col-lg-10 background-color">
+            <div className="col-lg-10 col-md-9 col-sm-12 background-color">
                 <h3 style={{fontWeight:'700'}} className="text-center pt-4">Make Admin</h3>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <label htmlFor="">

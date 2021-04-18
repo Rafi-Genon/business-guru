@@ -1,6 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
-import { userContext } from '../../../App'
+import { userContext } from '../../../App';
+import "./SideBar.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faComment, faDatabase, faList, faPlus, faShoppingCart, faTrashAlt, faUserShield } from '@fortawesome/free-solid-svg-icons';
 
 const SideBar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(userContext)
@@ -19,21 +22,21 @@ const SideBar = () => {
     }, [loggedInUser.email])
     console.log(isAdmin);
     return (
-        <div className="col-2" style={{ height: "100vh" }}>
-            <ul className="list-unstyled">
+        <div className="col-lg-2 col-md-3 col-sm-12" style={{ height: "100vh" }}>
+            <ul className="list-unstyled pl-3 pt-3 sidebar-item">
                 {
                     !isAdmin && <div>
-                        <Link to="/bookingList"><li>Booking List</li></Link>
-                        <Link to="/order"><li>Order</li></Link>
-                        <Link to="/review"><li>Review</li></Link>
+                        <Link to="/bookingList"><li><FontAwesomeIcon icon={faList} /> Booking List</li></Link>
+                        <Link to="/order"><li><FontAwesomeIcon icon={faShoppingCart} />Place Order</li></Link>
+                        <Link to="/review"><li><FontAwesomeIcon icon={faComment} /> Review</li></Link>
                     </div>
                 }
                 {
                     isAdmin && <div>
-                        <Link to="/allOrderList"><li>Order List</li></Link>
-                        <Link to="/addService"><li>Add Service</li></Link>
-                        <Link to="/makeAdmin"><li>Make Admin</li></Link>
-                        <Link to="/manageServices"><li>Manage Services</li></Link>
+                        <Link to="/allOrderList"><li><FontAwesomeIcon icon={faList} /> Order List</li></Link>
+                        <Link to="/addService"><li><FontAwesomeIcon icon={faPlus} /> Add Service</li></Link>
+                        <Link to="/makeAdmin"><li><FontAwesomeIcon icon={faUserShield} /> Make Admin</li></Link>
+                        <Link to="/manageServices"><li><FontAwesomeIcon icon={faDatabase} /> Manage Services</li></Link>
                     </div>
                 }
             </ul>
