@@ -7,7 +7,7 @@ Live site: https://business-guru-11f99.web.app/
   <li>Mongodb</li>
   <li>Express</li>
   <li>React</li>
-  <li>Node</li>
+  <li>NodeJS</li>
 </ul>
 <h1> This is manage services page of admin</h1>
 
