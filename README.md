@@ -4,4 +4,5 @@ Live site: https://business-guru-11f99.web.app/
 
 
 ![alt text](https://i.ibb.co/V26ZGrx/Screenshot-285.png)
-https://i.ibb.co/2dfL2Tc/Screenshot-282.png
+![alt text](https://i.ibb.co/2dfL2Tc/Screenshot-282.png)
+
