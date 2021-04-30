@@ -4,8 +4,10 @@ Live site: https://business-guru-11f99.web.app/
 
 •	I have used HTML, css, javascript, jsx, react, react-router, bootstrap, react-bootstrap, font-awsome, react-font-awsome, custom api, git-hub, firebase, node, mongodb.
 <ul>
-  <li>react</li>
-  <li>node</li>
+  <li>Mongodb</li>
+  <li>Express</li>
+  <li>React</li>
+  <li>Node</li>
 </ul>
 <h1> This is manage services page of admin</h1>
 
