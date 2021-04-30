@@ -1,7 +1,11 @@
 Hey, this is a freelance and business support website. You can find here business logo design, Degital marketing support, also you can order your business react based website.
 
 Live site: https://business-guru-11f99.web.app/
-
+•	I have used HTML, css, javascript, jsx, react, react-router, bootstrap, react-bootstrap, font-awsome, react-font-awsome, custom api, git-hub, firebase, node, mongodb.
+<ul>
+  <li>react</li>
+  <li>node</li>
+</ul>
 <h1> This is manage services page of admin</h1>
 
 ![alt text](https://i.ibb.co/V26ZGrx/Screenshot-285.png)
