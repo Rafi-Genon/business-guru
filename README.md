@@ -2,4 +2,4 @@ Hey, this is a freelance and business support website. You can find here busines
 
 Live site: https://business-guru-11f99.web.app/
 
-(https://ibb.co/bztZVqF)
+(<https://ibb.co/bztZVqF>)
